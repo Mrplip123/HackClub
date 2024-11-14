@@ -17,8 +17,8 @@
         }} 
         const index = Math.floor(Math.random() * names.length); 
         const Result = names[index]; 
-        const SplitRes = Result.split(": ")[1]; 
-        const BrokeRes = (Result.split(": ")[0]).toLowerCase(); 
+        const SplitRes = Result.split(":")[1]; 
+        const BrokeRes = (Result.split(":")[0]).toLowerCase(); 
         var answer = prompt(SplitRes); 
         if (answer.toLowerCase() === BrokeRes) { alert("Correct"); alert(BrokeRes); alert(answer);
         points += 1;

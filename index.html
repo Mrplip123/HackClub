@@ -19,6 +19,8 @@
         const Result = names[index]; 
         const SplitRes = Result.split(": ")[1]; 
         const BrokeRes = (Result.split(": ")[0]).toLowerCase(); 
+        alert(SplitRes)
+        alert(BrokeRes)
         var answer = prompt(SplitRes); 
         if (answer.toLowerCase() === BrokeRes) { alert("Correct"); 
         points += 1;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +21,9 @@
         const SplitRes = Result.split(" : ")[1]; 
         const BrokeRes = (Result.split(" : ")[0]).toLowerCase(); 
         var answer = prompt(SplitRes); 
-        if (answer.toLowerCase() === BrokeRes) { alert("Correct"); alert(BrokeRes); alert(answer);
+        if (answer.toLowerCase() === BrokeRes) { alert("Correct");
         points += 1;
-        } else { alert("Wrong, it was: " + BrokeRes);  alert(BrokeRes); alert(answer) } names.splice(index, 1);
+        } else { alert("Wrong, it was: " + BrokeRes);} names.splice(index, 1);
         document.querySelectorAll('#promptlist li')[index].remove(); 
         Sigma();
         }

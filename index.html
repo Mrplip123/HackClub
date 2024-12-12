@@ -3,82 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Coming!!! Dont use rn tho</title>
+    <title>Update Coming!!! Don't use rn though</title>
 </head>
 <body>
     <script>
     let points = 0;
     let names = []; 
+
     function Sigma() { 
-        if (names.length === 0)
-        { names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent); 
-        if (names.length === 0)
-        if (points =< 4); { alert("Your score was: " + points + "/10. You Suck!"); 
-        if (points < 8 and points > 4); { alert("Your score was: " + points + "/10. Practice More");
-        if (points > 7); { alert("Your score was: " + points + "/10. You are a true Sigma!")
-        return; 
-        }} 
+        // Initialize names from the list if not already done
+        if (names.length === 0) {
+            names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
+        }
+
+        // Exit if no more names are left
+        if (names.length === 0) {
+            if (points <= 4) {
+                alert("Your score was: " + points + "/10. You Suck!");
+            } else if (points > 4 && points < 8) {
+                alert("Your score was: " + points + "/10. Practice More");
+            } else if (points >= 8) {
+                alert("Your score was: " + points + "/10. You are a true Sigma!");
+            }
+            return; // End the function once all prompts are done
+        }
+
+        // Randomly select a word from the list
         const index = Math.floor(Math.random() * names.length); 
         const Result = names[index]; 
         const SplitRes = Result.split(" : ")[1]; 
         const BrokeRes = (Result.split(" : ")[0]).toLowerCase(); 
         var answer = prompt(SplitRes); 
-        if (answer.toLowerCase() === BrokeRes) { alert("Correct");
-        points += 1;
-        } else { alert("Wrong, it was: " + BrokeRes);} names.splice(index, 1);
-        document.querySelectorAll('#promptlist li')[index].remove(); 
-        Sigma();
+
+        // Check if the answer is correct
+        if (answer.toLowerCase() === BrokeRes) { 
+            alert("Correct");
+            points += 1;
+        } else { 
+            alert("Wrong, it was: " + BrokeRes);
         }
+
+        // Remove the used item from the list
+        names.splice(index, 1);
+        document.querySelectorAll('#promptlist li')[index].remove(); 
+
+        // Continue the game with the next prompt
+        Sigma();
+    }
     </script>
+
     <style>
-    body{
+    body {
         background-color: aquamarine;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
-    h1{
+
+    h1 {
         text-align: center;
         color: black;
     }
-    h4{
+
+    h4 {
         text-align: center;
         color: black;
     }
-    button{
+
+    button {
         margin: auto;
         color: rgb(115, 38, 171);
         height: 7vh;
         width: 14vh;
         margin-left: 590px;
     }
-    .buttons{
+
+    .buttons {
         display: flex;
         justify-content: center; 
         align-items: center; 
         height: 100vh;
     }
-    ul{
+
+    ul {
         display: none;
     }
     </style>
+
     <ul id="promptlist">
         <li>separate : To divide or keep things apart. For example, you might do this with your toys using different boxes to keep them organized.</li>
         <li>discourage : To make someone feel less confident or less excited about doing something. It’s like when someone says, “You can’t do it,” but remember, you totally can!</li>
         <li>fortunate : To be lucky or to have good things happen to you. For example, if you find money on the ground, you’re feeling this way!</li>
         <li>espionage : A fancy word for spying, often to find out secret information. Think of it like a secret agent trying to uncover a mystery!</li>
-        <li>elaborate : To explain something in more detail, or it can mean something that is fancy or very detailed. For example, a drawing with lots of colours and tiny patterns.</li>
-        <li>entourage : A group of people who follow or help someone important, like a singer or actor. </li>
-        <li>abbreviate : To make a word or phrase shorter. For example, instead of writing “Doctor,” you can write “Dr.”</li>
-        <li>scrimmage : A practice game, often used in sports like soccer or hockey, where you play just for fun or practice, not to win.</li>
-        <li>accelerate : To go faster. For example, when a car speeds up in a drag race.</li>
-        <li>foliage : A fancy word for the leaves on trees or plants. In fall, you can see it change to beautiful red, yellow, and orange!</li>
-    </ul>
-    <h1>Supa Sigma Spelling App</h1>
-    <h4>       By: Adi         </h4>
-    <div class=.buttons>
-        <button onclick="Sigma()">Play</button>
-        <button><a href= "https://mrplip123.github.io/Adi/">About Me</a></button>
-    </div>
-</body>
-</html>
+        <li>elaborate : To explain something in more detail, or it can mean something that is fancy or very detailed. For example, a drawing with lots of colours and tiny 

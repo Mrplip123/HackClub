@@ -7,73 +7,35 @@
 </head>
 <body>
     <script>
-    let points = 0;
-    let names = []; 
+    let points = 0, names = [];
     function Sigma() { 
+        if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);}
-        if (names.length === 0) {
-            if (points <= 4) {
-                alert("Your score was: " + points + "/10. You Suck!");
-            } else if (points > 4 && points < 8) {
-                alert("Your score was: " + points + "/10. Practice More");
-            } else if (points >= 8) {
-                alert("Your score was: " + points + "/10. You are a true Sigma!");
-            }
-            return;}
-        const index = Math.floor(Math.random() * names.length); 
-        const Result = names[index]; 
-        const SplitRes = Result.split(" : ")[1]; 
-        const BrokeRes = (Result.split(" : ")[0]).toLowerCase(); 
-        var answer = prompt(SplitRes); 
-        if (answer.toLowerCase() === BrokeRes) { 
-            alert("Correct");
-            points += 1;
-        } else { 
-            alert("Wrong, it was: " + BrokeRes);
+            alert(`Your score was: ${points}/10. ${points <= 4 ? 'You Suck!' : points < 8 ? 'Practice More' : 'You are a true Sigma!'}`);
+            return;
+        }
+        const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
+        let answer = prompt(SplitRes);
+        if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
+        else alert(`Wrong, it was: ${BrokeRes}`);
         names.splice(index, 1);
-        document.querySelectorAll('#promptlist li')[index].remove(); 
+        document.querySelectorAll('#promptlist li')[index].remove();
         Sigma();
     }
     </script>
     <style>
-    body {
-        background-color: aquamarine;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-    h1 {
-        text-align: center;
-        color: black;
-    }
-    h4 {
-        text-align: center;
-        color: black;
-    }
-    button {
-        margin: auto;
-        color: rgb(115, 38, 171);
-        height: 7vh;
-        width: 14vh;
-        margin-left: 590px;
-    }
-    .buttons {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        height: 100vh;
-    }
-    ul {
-        display: none;
-    }
+    body { background-color: aquamarine; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
+    h1, h4 { text-align: center; color: black; }
+    button { margin: auto; color: rgb(115, 38, 171); height: 7vh; width: 14vh; margin-left: 590px; }
+    .buttons { display: flex; justify-content: center; align-items: center; height: 100vh; }
+    ul { display: none; }
     </style>
     <ul id="promptlist">
         <li>separate : To divide or keep things apart. For example, you might do this with your toys using different boxes to keep them organized.</li>
         <li>discourage : To make someone feel less confident or less excited about doing something. It’s like when someone says, “You can’t do it,” but remember, you totally can!</li>
         <li>fortunate : To be lucky or to have good things happen to you. For example, if you find money on the ground, you’re feeling this way!</li>
         <li>espionage : A fancy word for spying, often to find out secret information. Think of it like a secret agent trying to uncover a mystery!</li>
-        <li>elaborate : To explain something in more detail, or it can mean something that is fancy or very detailed. For example, a drawing with lots of colours and tiny 
+        <li>elaborate : To explain something in more detail, or it can mean something that is fancy or very detailed. For example, a drawing with lots of colours and tiny patterns.</li>
         <li>entourage : A group of people who follow or help someone important, like a singer or actor.</li>
         <li>abbreviate : To make a word or phrase shorter. For example, instead of writing “Doctor,” you can write “Dr.”</li>
         <li>scrimmage : A practice game, often used in sports like soccer or hockey, where you play just for fun or practice, not to win.</li>

@@ -22,24 +22,24 @@
         document.querySelectorAll('#promptlist li')[index].remove();
         Sigma();
     }
-    function Unscramble() {
-    if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
-    if (names.length === 0) {
-        alert(`Your score was: ${points}/10. ${points <= 4 ? 'You Suck!': points < 8 ? 'Practice More': 'You are a true Sigma!'}`);
-        return;
-    const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
-    document.querySelectorAll('#promptlist li')[index].remove();
-    const array = Brokeres.split('');
-        for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));  // Random index
-        [array[i], array[j]] = [array[j], array[i]];   // Swap elements
-    }
-    let answer = prompt(array.join(''));
-    if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
-    else alert(`Wrong, it was: ${BrokeRes}`);
-    names.splice(index, 1);
-    document.querySelectorAll('#promptlist li')[index].remove();
-    Unscramble();
+        function Unscramble() {
+        if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
+        if (names.length === 0) {
+            alert(`Your score was: ${points}/10. ${points <= 4 ? 'You Suck!': points < 8 ? 'Practice More': 'You are a true Sigma!'}`);
+            return;
+        const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
+        document.querySelectorAll('#promptlist li')[index].remove();
+        const array = Brokeres.split('');
+            for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));  // Random index
+            [array[i], array[j]] = [array[j], array[i]];   // Swap elements
+        alert(array)
+        let answer = prompt(array.join(''));
+        if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
+        else alert(`Wrong, it was: ${BrokeRes}`);
+        names.splice(index, 1);
+        document.querySelectorAll('#promptlist li')[index].remove();
+        Unscramble();
     }
     </script>
     <style>

@@ -41,9 +41,11 @@
         document.querySelectorAll('#promptlist li')[index].remove();
         Unscramble();
             }
-    function Word_list() {
-        alert(document.querySelectorAll('#promptlist li'))
-    }
+   function Word_list() {
+    let wordList = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent).join('\n');
+    alert(wordList);
+}
+
     </script>
     <style>
     body { background-color: aquamarine; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }

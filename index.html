@@ -22,7 +22,7 @@
         document.querySelectorAll('#promptlist li')[index].remove();
         Sigma();
     }
-        function Unscramble() {
+    function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
             alert(`Your score was: ${points}/10. ${points <= 4 ? 'You Suck!': points < 8 ? 'Practice More': 'You are a true Sigma!'}`);
@@ -41,6 +41,9 @@
         document.querySelectorAll('#promptlist li')[index].remove();
         Unscramble();
             }
+    function Word_list() {
+        alert(document.querySelectorAll('#promptlist li'))
+    }
     </script>
     <style>
     body { background-color: aquamarine; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
@@ -66,6 +69,7 @@
     <h4>By: Adi</h4>
     <div class="buttona">
         <button onclick="Sigma()">Play</button>
+        <button onclick="Unscramble()">Unscramble</button>
         <button onclick="Unscramble()">Unscramble</button>
     </div>
     <div class="buttonb">

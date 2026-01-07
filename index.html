@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supa Sigma Spelling App</title>
+    <title>Supa Sigma Science App</title>
 </head>
 <body>
     <script>
@@ -11,7 +11,7 @@
     function Sigma() { 
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/10. ${points <= 4 ? 'You Suck!' : points < 8 ? 'Practice More' : 'You are a true Sigma!'}`);
+            alert(`Your score was: ${points}/25. ${points <= 4 ? 'You Suck!' : 4 < points < 8 ? 'Practice More' : 7 < points < 12 ? 'Halfway there' : 11 < points < 17 ? 'Lock in cuh' : 16 < points < 25 ? 'pretty decent if I do say so myself': points = 25 ? 'You are a true Sigma!'}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
@@ -55,18 +55,33 @@
     .buttonb { display: flex; justify-content: center; align-items: center; }
     ul { display: none; }
     </style>
-    <ul id="promptlist">
-        <li>Statement : A sentence that shares information, an opinion, or a fact. Example: "The sky is blue" is one way to share a fact.</li>
-        <li>Department : A section of a larger organization where people work on similar tasks. Example: A hospital has a group of workers who focus only on helping children.</li>
-        <li>Entertainment : Something that people watch, listen to, or do for fun. Example: Playing video games or watching a movie is a way to have fun.</li>
-        <li>Announcement : Information shared with a group, usually in a public way. Example: A teacher might tell the class about an upcoming field trip.</li>
-        <li>Relationship : A connection between people, places, or things. Example: Two friends have a special bond because they care about each other.</li>
-        <li>Environment : The world around us, including air, water, land, and living things. Example: Trees, animals, and the weather are all part of the natural world.</li>
-        <li>Ownership : The right to have and control something. Example: A person who has a bike can decide when and where to ride it.</li>
-        <li>Instrument : An object used to create music or perform a task. Example: A piano makes sounds when its keys are pressed.</li>
-        <li>Experiment : A test done to discover something new or prove an idea. Example: Mixing different liquids to see what happens is a way to learn about science.</li>
-        <li>Treatment : The way something or someone is cared for or handled. Example: A doctor gives medicine to help a sick person feel better.</li>
-    </ul>
+  <ul id="promptlist">
+    <li>Structure : Anything made of parts put together for a particular purpose.</li>
+    <li>Function : The task or purpose of a structure.</li>
+    <li>Form : The shape and physical appearance of a structure.</li>
+    <li>Gravity : A non-contact force of attraction that pulls objects with mass toward each other, noticeable when one object has a large mass.</li>
+    <li>Magnetic force : A non-contact force that pulls magnets together.</li>
+    <li>Electrostatic force : A non-contact force that causes static cling between charged objects.</li>
+    <li>Applied force : A force that occurs when objects come into contact through a push or pull.</li>
+    <li>Magnitude : The strength or size of a force.</li>
+    <li>Direction : The way in which a force acts, such as up, down, left, or right.</li>
+    <li>Mass : The amount of matter in an object, measured in grams or kilograms.</li>
+    <li>Weight : The force of gravity acting on an object, measured in newtons.</li>
+    <li>Load : A force acting on a structure.</li>
+    <li>Static load : A load caused by gravity that remains constant, such as the weight of a structure.</li>
+    <li>Solid structure : A structure that relies on solid materials and has a large mass to support loads.</li>
+    <li>Frame structure : A structure made of connected parts that form a skeleton to support loads.</li>
+    <li>Shell structure : A hollow, curved structure that is lightweight but strong and rigid.</li>
+    <li>Combination structure : A structure made from a combination of solid, frame, and shell forms.</li>
+    <li>External force : A force acting on a structure from outside the structure.</li>
+    <li>Internal force : A force acting between parts within the same object.</li>
+    <li>Point of application : The specific location on an object where a force is applied.</li>
+    <li>Plane of application : An imaginary flat plane through which an applied force passes.</li>
+    <li>Tension : An internal force that pulls particles in an object apart.</li>
+    <li>Compression : An internal force that squeezes particles in an object together.</li>
+    <li>Torsion : An internal force that twists an object.</li>
+    <li>Shear : An internal force that causes parts of an object to slide past each other, often leading to tearing.</li>
+</ul>
     <h1>Supa Sigma Spelling App</h1>
     <h4>By: Adi</h4>
     <div class="buttona">

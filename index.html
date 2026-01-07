@@ -27,6 +27,7 @@ alert(`Your score was: ${points}/25. ${message}`);
         if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
         else alert(`Wrong, it was: ${BrokeRes}`);
         names.splice(index, 1);
+        document.querySelectorAll('#promptlist li')[index].remove();
         Sigma();
     }
     function Unscramble() {
@@ -89,7 +90,7 @@ alert(`Your score was: ${points}/25. ${message}`);
     <li>Torsion : An internal force that twists an object.</li>
     <li>Shear : An internal force that causes parts of an object to slide past each other, often leading to tearing.</li>
 </ul>
-    <h1>Supa Sigma Spelling App</h1>
+    <h1>Supa Sigma Science App</h1>
     <h4>By: Adi</h4>
     <div class="buttona">
         <button onclick="Sigma()">Play</button>

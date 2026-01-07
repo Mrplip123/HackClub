@@ -11,15 +11,22 @@
     function Sigma() { 
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/25. ${points <= 4 ? 'You Suck!' : 4 < points < 8 ? 'Practice More' : 7 < points < 12 ? 'Halfway there' : 11 < points < 17 ? 'Lock in cuh' : 16 < points < 25 ? 'pretty decent if I do say so myself': points = 25 ? 'You are a true Sigma!'}`);
-            return;
+            let message = '';
+            if (points <= 4) message = 'You Suck!';
+            else if (points < 8) message = 'Practice More';
+            else if (points < 12) message = 'Halfway there';
+            else if (points < 17) message = 'Lock in cuh';
+            else if (points < 25) message = 'Pretty decent if I do say so myself';
+            else message = 'You are a true Sigma!';
+
+alert(`Your score was: ${points}/25. ${message}`);
+
         }
         const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
         let answer = prompt(SplitRes);
         if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
         else alert(`Wrong, it was: ${BrokeRes}`);
         names.splice(index, 1);
-        document.querySelectorAll('#promptlist li')[index].remove();
         Sigma();
     }
     function Unscramble() {

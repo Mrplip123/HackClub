@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supa Sigma Science App</title>
+    <title>Supa Sigma ISS App</title>
 </head>
 <body>
     <script>
@@ -18,11 +18,13 @@
             else if (points < 17) message = 'Lock in cuh';
             else if (points < 25) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-
-alert(`Your score was: ${points}/25. ${message}`);
-
+            alert(`Your score was: ${points}/25. ${message}`);
+            return;
         }
-        const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
+        const index = Math.floor(Math.random() * names.length),
+              Result = names[index],
+              SplitRes = Result.split(" : ")[1],
+              BrokeRes = Result.split(" : ")[0].toLowerCase();
         let answer = prompt(SplitRes);
         if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
         else alert(`Wrong, it was: ${BrokeRes}`);
@@ -30,75 +32,75 @@ alert(`Your score was: ${points}/25. ${message}`);
         document.querySelectorAll('#promptlist li')[index].remove();
         Sigma();
     }
+
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/10. ${points <= 4 ? 'You Suck!': points < 8 ? 'Practice More': 'You are a true Sigma!'}`);
-            return;}
-        const index = Math.floor(Math.random() * names.length), Result = names[index], SplitRes = Result.split(" : ")[1], BrokeRes = Result.split(" : ")[0].toLowerCase();
+            alert(`Your score was: ${points}/10.`);
+            return;
+        }
+        const index = Math.floor(Math.random() * names.length),
+              Result = names[index],
+              SplitRes = Result.split(" : ")[1],
+              BrokeRes = Result.split(" : ")[0].toLowerCase();
         document.querySelectorAll('#promptlist li')[index].remove();
         const array = BrokeRes.split('');
-            for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));  // Random index
-            [array[i], array[j]] = [array[j], array[i]]; } // Swap elements
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
         let answer = prompt(array.join(''));
-        if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; Unscramble();names.splice(index, 1);
-        document.querySelectorAll('#promptlist li')[index].remove();}
+        if (answer.toLowerCase() === BrokeRes) { alert("Correct"); points++; }
         else alert(`Wrong, it was: ${BrokeRes}`);
         names.splice(index, 1);
-        document.querySelectorAll('#promptlist li')[index].remove();
         Unscramble();
-            }
-   function Word_list() {
-    let wordList = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent).join('\n');
-    alert(wordList);
-}
+    }
 
+    function Word_list() {
+        let wordList = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent).join('\n');
+        alert(wordList);
+    }
     </script>
+
     <style>
-    body { background-color: aquamarine; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
+    body { background-color: aquamarine; background-size: cover; background-attachment: fixed; }
     h1, h4 { text-align: center; color: black; }
-    button { margin: auto; color: rgb(115, 38, 171); height: 7vh; width: 14vh; margin: 10px; }
-    .buttona { display: flex; justify-content: center; align-items: center; }
-    .buttonb { display: flex; justify-content: center; align-items: center; }
+    button { margin: auto; color: rgb(115, 38, 171); height: 7vh; width: 16vh; margin: 10px; }
+    .buttona, .buttonb { display: flex; justify-content: center; align-items: center; }
     ul { display: none; }
     </style>
-  <ul id="promptlist">
-    <li>Structure : Anything made of parts put together for a particular purpose.</li>
-    <li>Function : The task or purpose of a structure.</li>
-    <li>Form : The shape and physical appearance of a structure.</li>
-    <li>Gravity : A non-contact force of attraction that pulls objects with mass toward each other, noticeable when one object has a large mass.</li>
-    <li>Magnetic force : A non-contact force that pulls magnets together.</li>
-    <li>Electrostatic force : A non-contact force that causes static cling between charged objects.</li>
-    <li>Applied force : A force that occurs when objects come into contact through a push or pull.</li>
-    <li>Magnitude : The strength or size of a force.</li>
-    <li>Direction : The way in which a force acts, such as up, down, left, or right.</li>
-    <li>Mass : The amount of matter in an object, measured in grams or kilograms.</li>
-    <li>Weight : The force of gravity acting on an object, measured in newtons.</li>
-    <li>Load : A force acting on a structure.</li>
-    <li>Static load : A load caused by gravity that remains constant, such as the weight of a structure.</li>
-    <li>Solid structure : A structure that relies on solid materials and has a large mass to support loads.</li>
-    <li>Frame structure : A structure made of connected parts that form a skeleton to support loads.</li>
-    <li>Shell structure : A hollow, curved structure that is lightweight but strong and rigid.</li>
-    <li>Combination structure : A structure made from a combination of solid, frame, and shell forms.</li>
-    <li>External force : A force acting on a structure from outside the structure.</li>
-    <li>Internal force : A force acting between parts within the same object.</li>
-    <li>Point of application : The specific location on an object where a force is applied.</li>
-    <li>Plane of application : An imaginary flat plane through which an applied force passes.</li>
-    <li>Tension : An internal force that pulls particles in an object apart.</li>
-    <li>Compression : An internal force that squeezes particles in an object together.</li>
-    <li>Torsion : An internal force that twists an object.</li>
-    <li>Shear : An internal force that causes parts of an object to slide past each other, often leading to tearing.</li>
-</ul>
-    <h1>Supa Sigma Science App</h1>
+
+    <!-- UPDATED ISS TERMS -->
+    <ul id="promptlist">
+        <li>Seven years' war : A global conflict between Britain and France from 1754 to 1763 over trade and territory.</li>
+        <li>Mercantilism : An economic system where nations compete for wealth, resources, and markets.</li>
+        <li>French and indian war : The North American part of the Seven Years' War.</li>
+        <li>Articles of capitulation : Terms proposed by the French to keep their language, laws, and religion after surrender.</li>
+        <li>Royal proclamation : A 1763 British law that limited French Catholic rights and attempted assimilation.</li>
+        <li>Quebec act : A 1774 law that restored French civil law and religious freedom.</li>
+        <li>Seigneurial system : A French land system where land was divided into long strips.</li>
+        <li>American revolution : A war beginning in 1775 where colonies fought for independence from Britain.</li>
+        <li>Boston tea party : A 1773 protest against British taxes.</li>
+        <li>Patriots : Colonists who wanted independence from Britain.</li>
+        <li>Loyalists : Colonists who remained loyal to the British Crown.</li>
+        <li>Black loyalists : Enslaved Black people promised freedom for supporting Britain.</li>
+        <li>Haldimand tract : Land granted to the Six Nations for their loyalty to Britain.</li>
+        <li>Constitutional act : A 1791 law that divided Quebec into Upper and Lower Canada.</li>
+        <li>Upper canada : British-law colony settled mostly by Loyalists.</li>
+        <li>Lower canada : French-speaking colony with French civil law.</li>
+    </ul>
+
+    <h1>Supa Sigma ISS App</h1>
     <h4>By: Adi</h4>
+
     <div class="buttona">
         <button onclick="Sigma()">Play</button>
         <button onclick="Unscramble()">Unscramble</button>
         <button onclick="Word_list()">Word List</button>
     </div>
+
     <div class="buttonb">
-        <button onclick="No()">Nothing to see here</button>
+        <button onclick="alert('Nothing here')">Nothing to see here</button>
         <button><a href="https://mrplip123.github.io/Hackerclub/">Update Log</a></button>
     </div>
 </body>

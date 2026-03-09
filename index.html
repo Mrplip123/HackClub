@@ -18,7 +18,7 @@
             else if (points < 12) message = 'Lock in cuh';
             else if (points < 15) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/25. ${message}`);
+            alert(`Your score was: ${points}/15. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -36,7 +36,7 @@
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/10.`);
+            alert(`Your score was: ${points}/15.`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),

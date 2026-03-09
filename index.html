@@ -18,7 +18,7 @@
             else if (points < 12) message = 'Lock in cuh';
             else if (points < 15) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/15. ${message}`);
+            alert(`Your score was: ${points}/20. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -36,7 +36,7 @@
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/15.`);
+            alert(`Your score was: ${points}/20.`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -86,7 +86,12 @@
     <li>Addiction : When a person believes they need drugs or substances to cope.</li>
     <li>Brain : The body part that alcohol immediately affects.</li>
     <li>Peer pressure : Influence from friends that may encourage teens to use drugs or alcohol.</li>
-    <li>Substance use : The act of using alcohol or drugs which may lead to health or social problems.</li>
+    <li>Substance abuse : The act of using alcohol or drugs which may lead to health or social problems.</li>
+    <li>Language matters : Bell Let's talk No. 1</li>
+    <li>Educate yourself : Bell Let's talk No. 2</li>
+    <li>Be kind : Bell Let's talk No. 3</li>
+    <li>Listen and ask : Bell Let's talk No. 4</li>
+    <li>Think about it : Bell Let's talk No. 5</li>
 </ul>
 
     <h1>Supa Sigma Health App</h1>

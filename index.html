@@ -12,13 +12,13 @@
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
             let message = '';
-            if (points <= 4) message = 'You Suck!';
-            else if (points < 6) message = 'Practice More';
-            else if (points < 9) message = 'Halfway there';
-            else if (points < 12) message = 'Lock in cuh';
-            else if (points < 15) message = 'Pretty decent if I do say so myself';
+            if (points <= 5) message = 'You Suck!';
+            else if (points < 10) message = 'Practice More';
+            else if (points < 15) message = 'Halfway there';
+            else if (points < 20) message = 'Lock in cuh';
+            else if (points < 25) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/44. ${message}`);
+            alert(`Your score was: ${points}/25. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -36,7 +36,7 @@
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/44.`);
+            alert(`Your score was: ${points}/25.`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -87,34 +87,14 @@
     <li>Sublimation : The change of state directly from solid to gas.</li>
     <li>Deposition : The change of state directly from gas to solid.</li>
     <li>Particle : A tiny piece of matter that makes up all substances.</li>
-    <li>Average Kinetic Energy : The average energy of motion of particles in a substance.</li>
     <li>Particle Motion : The constant movement of particles in matter.</li>
     <li>Particle Attraction : The forces that pull particles toward each other.</li>
     <li>Expansion Joint : A space in structures like bridges that allows materials to expand without cracking.</li>
-    <li>HVAC : Heating, ventilation, and air conditioning systems used to control building temperature.</li>
     <li>Central Heating : A system that heats a building using a furnace and distributes warm air or water.</li>
-    <li>Air Conditioning : A system that cools indoor air and removes heat.</li>
-    <li>Thermal Expansion of Solids : When solid materials increase in size when heated.</li>
-    <li>Thermal Expansion of Liquids : When liquids increase in volume when heated.</li>
-    <li>Thermal Expansion of Gases : When gases expand as temperature increases.</li>
     <li>Density : The amount of mass in a given volume of a substance.</li>
     <li>Volume : The amount of space an object occupies.</li>
     <li>Mass : The amount of matter in an object.</li>
-    <li>Furnace : A heating system that burns fuel to produce heat.</li>
-    <li>Natural Gas : A fossil fuel often burned in furnaces for heating.</li>
-    <li>Petroleum : A fossil fuel used for energy and heating.</li>
-    <li>Kinetic Energy of Particles : Energy particles have because they are moving.</li>
-    <li>Particle Spacing : The amount of space between particles in matter.</li>
     <li>Gas Pressure : The force created when gas particles collide with the walls of a container.</li>
-    <li>Environmental Impact : The effect human activities have on the environment.</li>
-    <li>Migration : The movement of animals from one region to another seasonally.</li>
-    <li>Panting : A cooling method used by animals like dogs to release heat.</li>
-    <li>Basking : When reptiles sit in sunlight to warm their bodies.</li>
-    <li>Hexagonal Ice Structure : The typical six-sided arrangement of particles in ice.</li>
-    <li>Balloon Expansion : A balloon growing larger when the gas inside is heated.</li>
-    <li>Tire Expansion : Air inside a tire expanding when it heats up.</li>
-    <li>Gasoline Expansion : Gasoline increasing in volume when temperature rises.</li>
-    <li>Ocean Thermal Expansion : The increase in ocean water volume due to warming temperatures.</li>
 </ul>
 
     <h1>Supa Sigma Science App</h1>

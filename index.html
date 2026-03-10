@@ -18,7 +18,7 @@
             else if (points < 20) message = 'Lock in cuh';
             else if (points < 25) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/25. ${message}`);
+            alert(`Your score was: ${points}/30. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -36,7 +36,7 @@
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/25.`);
+            alert(`Your score was: ${points}/30.`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -95,6 +95,11 @@
     <li>Volume : The amount of space an object occupies.</li>
     <li>Mass : The amount of matter in an object.</li>
     <li>Gas Pressure : The force created when gas particles collide with the walls of a container.</li>
+    <li>All matter is made of tiny particles : Particle Theory 1</li>
+    <li>All particles have space in between them : Particle Theory 2</li>
+    <li>Particles are always moving : Particle Theory 3</li>
+    <li>Particles move faster when heated : Particle Theory 4</li>
+    <li>Particles are attracted to each other : Particle Theory 5</li>
 </ul>
 
     <h1>Supa Sigma Science App</h1>

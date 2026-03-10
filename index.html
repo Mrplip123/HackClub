@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supa Sigma Health App</title>
+    <title>Supa Sigma Science App</title>
 </head>
 <body>
     <script>
@@ -18,7 +18,7 @@
             else if (points < 12) message = 'Lock in cuh';
             else if (points < 15) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/20. ${message}`);
+            alert(`Your score was: ${points}/44. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -36,7 +36,7 @@
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/20.`);
+            alert(`Your score was: ${points}/44.`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -69,32 +69,55 @@
     .buttona, .buttonb { display: flex; justify-content: center; align-items: center; }
     ul { display: none; }
     </style>
-
-    <!-- UPDATED ISS TERMS -->
-<ul id="promptlist">
-    <li>Liver : The organ that can be damaged by long-term alcohol use causing cirrhosis or hepatitis.</li>
-    <li>Anxiety : An intense persistent fear of being watched or judged by others.</li>
-    <li>Phobia : A fear so strong that a person takes extreme measures to avoid the fear-producing activity.</li>
-    <li>Depression : A disorder that causes persistent sadness and lack of interest in life.</li>
-    <li>Conduct disorder : A disorder involving antisocial behaviour and disregard for social rules.</li>
-    <li>Psychiatrist : A mental health practitioner who can prescribe medication to treat patients.</li>
-    <li>Eating disorder : A psychological disorder characterized by abnormal or disturbed eating habits.</li>
-    <li>PTSD : A psychological disorder that can occur after experiencing or witnessing a traumatic event.</li>
-    <li>OCD : An anxiety disorder involving repeated thoughts or behaviours.</li>
-    <li>Tolerance : Needing more and more of a drug to produce the same effect.</li>
-    <li>Bipolar disorder : An affective disorder that causes extreme mood swings.</li>
-    <li>Psychological Dependence : When a person believes they need drugs or substances to cope.</li>
-    <li>Brain : The body part that alcohol immediately affects.</li>
-    <li>Peer pressure : Influence from friends that may encourage teens to use drugs or alcohol.</li>
-    <li>Substance abuse : The act of using alcohol or drugs which may lead to health or social problems.</li>
-    <li>Language matters : Bell Let's talk No. 1</li>
-    <li>Educate yourself : Bell Let's talk No. 2</li>
-    <li>Be kind : Bell Let's talk No. 3</li>
-    <li>Listen and ask : Bell Let's talk No. 4</li>
-    <li>Talk about it : Bell Let's talk No. 5</li>
+<li><ul id="promptlist">
+    <li>Particle Theory : A theory that explains what matter is made of and how it behaves.</li>
+    <li>Heat : The transfer of energy from the particles of a warmer object to the particles of a colder object.</li>
+    <li>Kinetic Energy : Energy that all moving objects possess.</li>
+    <li>Thermal Energy : The total kinetic energy and energy of attraction in all particles of a substance.</li>
+    <li>Temperature : A measure of the average kinetic energy of particles in a substance.</li>
+    <li>Thermal Expansion : When solids, liquids, or gases are heated and their volume increases.</li>
+    <li>Thermal Contraction : When solids, liquids, or gases are cooled and their volume decreases.</li>
+    <li>Solid : A state of matter with a definite shape and definite volume.</li>
+    <li>Liquid : A state of matter with definite volume but takes the shape of its container.</li>
+    <li>Gas : A state of matter with no definite shape or volume.</li>
+    <li>Melting : The change of state from solid to liquid.</li>
+    <li>Freezing : The change of state from liquid to solid.</li>
+    <li>Evaporation : The change of state from liquid to gas.</li>
+    <li>Condensation : The change of state from gas to liquid.</li>
+    <li>Sublimation : The change of state directly from solid to gas.</li>
+    <li>Deposition : The change of state directly from gas to solid.</li>
+    <li>Particle : A tiny piece of matter that makes up all substances.</li>
+    <li>Average Kinetic Energy : The average energy of motion of particles in a substance.</li>
+    <li>Particle Motion : The constant movement of particles in matter.</li>
+    <li>Particle Attraction : The forces that pull particles toward each other.</li>
+    <li>Expansion Joint : A space in structures like bridges that allows materials to expand without cracking.</li>
+    <li>HVAC : Heating, ventilation, and air conditioning systems used to control building temperature.</li>
+    <li>Central Heating : A system that heats a building using a furnace and distributes warm air or water.</li>
+    <li>Air Conditioning : A system that cools indoor air and removes heat.</li>
+    <li>Thermal Expansion of Solids : When solid materials increase in size when heated.</li>
+    <li>Thermal Expansion of Liquids : When liquids increase in volume when heated.</li>
+    <li>Thermal Expansion of Gases : When gases expand as temperature increases.</li>
+    <li>Density : The amount of mass in a given volume of a substance.</li>
+    <li>Volume : The amount of space an object occupies.</li>
+    <li>Mass : The amount of matter in an object.</li>
+    <li>Furnace : A heating system that burns fuel to produce heat.</li>
+    <li>Natural Gas : A fossil fuel often burned in furnaces for heating.</li>
+    <li>Petroleum : A fossil fuel used for energy and heating.</li>
+    <li>Kinetic Energy of Particles : Energy particles have because they are moving.</li>
+    <li>Particle Spacing : The amount of space between particles in matter.</li>
+    <li>Gas Pressure : The force created when gas particles collide with the walls of a container.</li>
+    <li>Environmental Impact : The effect human activities have on the environment.</li>
+    <li>Migration : The movement of animals from one region to another seasonally.</li>
+    <li>Panting : A cooling method used by animals like dogs to release heat.</li>
+    <li>Basking : When reptiles sit in sunlight to warm their bodies.</li>
+    <li>Hexagonal Ice Structure : The typical six-sided arrangement of particles in ice.</li>
+    <li>Balloon Expansion : A balloon growing larger when the gas inside is heated.</li>
+    <li>Tire Expansion : Air inside a tire expanding when it heats up.</li>
+    <li>Gasoline Expansion : Gasoline increasing in volume when temperature rises.</li>
+    <li>Ocean Thermal Expansion : The increase in ocean water volume due to warming temperatures.</li>
 </ul>
 
-    <h1>Supa Sigma Health App</h1>
+    <h1>Supa Sigma Science App</h1>
     <h4>By: Adi</h4>
 
     <div class="buttona">

@@ -14,11 +14,11 @@
             let message = '';
             if (points <= 5) message = 'You Suck!';
             else if (points < 10) message = 'Practice More';
-            else if (points < 20) message = 'Halfway there';
-            else if (points < 30) message = 'Lock in cuh';
-            else if (points < 40) message = 'Pretty decent if I do say so myself';
+            else if (points < 16) message = 'Halfway there';
+            else if (points < 22) message = 'Lock in cuh';
+            else if (points < 27) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/40. ${message}`);
+            alert(`Your score was: ${points}/27. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),

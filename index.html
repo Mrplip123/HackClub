@@ -12,13 +12,13 @@
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
             let message = '';
-            if (points <= 5) message = 'You Suck!';
-            else if (points < 10) message = 'Practice More';
-            else if (points < 16) message = 'Halfway there';
-            else if (points < 22) message = 'Lock in cuh';
-            else if (points < 27) message = 'Pretty decent if I do say so myself';
+            if (points <= 8) message = 'You Suck!';
+            else if (points < 16) message = 'Practice More';
+            else if (points < 24) message = 'Halfway there';
+            else if (points < 32) message = 'Lock in cuh';
+            else if (points < 39) message = 'Pretty decent if I do say so myself';
             else message = 'You are a true Sigma!';
-            alert(`Your score was: ${points}/27. ${message}`);
+            alert(`Your score was: ${points}/39. ${message}`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -36,7 +36,7 @@
     function Unscramble() {
         if (names.length === 0) names = Array.from(document.querySelectorAll('#promptlist li')).map(li => li.textContent);
         if (names.length === 0) {
-            alert(`Your score was: ${points}/30.`);
+            alert(`Your score was: ${points}/39.`);
             return;
         }
         const index = Math.floor(Math.random() * names.length),
@@ -93,17 +93,29 @@
 <li>Crucible Tongs : Clamps that are bent at the end</li>
 <li>Funnel : Wide top converging to narrow base</li>
 <li>Bunsen Burner : End is attached to a gas valve, bottom has a threading gas valve, twist collar to adjust oxygen levels and heat of the flame</li>
-<li>Biofuels : a liquid fuel produced from plant and animal materials.</li>
-<li>Ethanol : biofuel made from crops like corn</li>
-<li>Hydroelectric Dam : structure that stores water to generate electricity</li>
-<li>Turbine : device spun by water, steam, or air to generate power</li>
-<li>Generator : machine that converts mechanical energy into electrical energy</li>
-<li>Climate Change : long-term changes in Earth’s climate patterns</li>
+<li>Graduated Cylinder : tube with measurements on side, cohesion and adhesion form a U shape in the liquid known as a meniscus, read from the bottom of the meniscus</li>
+<li>Florence Flask : Rounded base with a tapered top for even heating</li>
+<li>Evaporating Dish : Helps with evaporating a solution to collect the solvent</li>
+<li>Mortar : Bowl you crush stuff in</li>
+<li>Pestle : Stick you crush stuff with</li>
+<li>Gas Lighter : Rubs flint against steel to create sparks</li>
+<li>Scoopula : Takes small powdered substances in little measurements(also Mr. Tong's favorite)</li>
+<li>Overflow Can : Helps measure how much water something displaces(I think?)</li>
+<li>Hazardous Household Product Symbols : HHPS</li>
+<li>Workplace Hazardous Materials Information System : WHMIS</li>
+<li>Material Safety Data Sheet : MSDS</li>
+<li>Scroll Saw : Helps with fine cutting in woodworking, teeth point down</li>
+<li>Drill Press : Allows for vertical cuts into wood</li>
+<li>Band Saw : Giant toothed blade for straight cuts</li>
+<li>Chuck : Holds drill bit inside of the Drill Press</li>
+<li>Chuck Key : Tightens Chuck</li>
+<li>Drill Bit : End of the drill press that goes into the wood</li>
+
 </ul>
 </ul>
 
     <h1>Supa Sigma Science App</h1>
-    <h4>By: Adi (make sure to thank Emily C for her continued efforts in making this study app possible)</h4>
+    <h4>By: Adi</h4>
 
     <div class="buttona">
         <button onclick="Sigma()">Play</button>
